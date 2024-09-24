@@ -1,11 +1,3 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 20px;
-}
-
 .container {
     max-width: 600px;
     margin: auto;
@@ -15,7 +7,7 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-h1, h2 {
+h1 {
     text-align: center;
     color: #2c7a7b;
 }
@@ -63,3 +55,35 @@ button:hover {
     margin-top: 20px;
     text-align: center;
 }
+
+.watering-card {
+    background-color: #f0f8ff;  /* Un color suave de fondo */
+    border: 2px solid #009688;  /* Borde con color resaltado */
+    border-radius: 10px;  /* Bordes redondeados */
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra sutil para darle relieve */
+}
+
+.watering-card h2 {
+    color: #009688;  /* Color para el título */
+    font-size: 1.5rem;  /* Tamaño de fuente para que resalte */
+    margin-bottom: 10px;
+}
+
+.watering-details p {
+    font-size: 1.1rem;  /* Un poco más grande para facilitar la lectura */
+    color: #333;  /* Color de texto oscuro */
+    margin: 5px 0;
+}
+
+.watering-details strong {
+    color: #00796b;  /* Color destacado para los títulos de los datos */
+}
+
+body {
+    font-family: 'Arial', sans-serif;  /* Fuente limpia y moderna */
+    background-color: #fafafa;  /* Fondo general de la página */
+    padding: 20px;
+}
+
