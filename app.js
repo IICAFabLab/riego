@@ -16,8 +16,9 @@ function getSchedule() {
             if (data.v0 > 0) {
                 tiempoRiego = tiempoRiego+data.v1;
                 scheduleHtml += `
-                    <p>Riego Número ${pairCount} - ${((7+tiempoRiego/60)%13)+(7+tiempoRiego/60)/12}:${tiempoRiego%60}: minutos</p>
-                    <p>Tiempo de riego ${pairCount}: ${data.v0} minutos</p>
+                    <p>Riego Número ${pairCount}:</p>
+                    <p>${((7+ Math.floor(tiempoRiego/60))%13)+Math.floor((7+Math.floor(tiempoRiego/60))/12)}:${tiempoRiego%60}</p>
+                    <p>${pairCount}: ${data.v0} minutos</p>
                 `;
                 pairCount++;
             }
