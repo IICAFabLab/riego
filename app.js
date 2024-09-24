@@ -18,6 +18,69 @@ function getSchedule() {
         .catch(error => console.error('Error al obtener el horario:', error));
 }
 
+function getSchedule() {
+    fetch(apiUrl + '&v0&v1&v2&v3&v4&v5&v6&v7')
+        .then(response => response.json())
+        .then(data => {
+            let scheduleHtml = '';
+            let pairCount = 1;
+            let tiempoRiego = 0;
+
+            if (data.v0 > 0) {
+                tiempoRiego = tiempoRiego+data.v1;
+                scheduleHtml += `
+                    <p>Riego Número ${pairCount} - ${((7+tiempoRiego/60)%13)+(7+tiempoRiego/60)/12}:${tiempoRiego%60}: minutos</p>
+                    <p>Tiempo de riego ${pairCount}: ${data.v0} minutos</p>
+                `;
+                pairCount++;
+            }
+            if (data.v2 > 0) {
+                tiempoRiego = tiempoRiego+data.v4;
+                scheduleHtml += `
+                    <p>Riego Número ${pairCount} - ${((7+tiempoRiego/60)%13)+(7+tiempoRiego/60)/12}:${tiempoRiego%60}: minutos</p>
+                    <p>Tiempo de riego ${pairCount}: ${data.v2} minutos</p>
+                `;
+                pairCount++;
+            }
+            if (data.v5 > 0) {
+                tiempoRiego = tiempoRiego+data.v6;
+                scheduleHtml += `
+                    <p>Riego Número ${pairCount} - ${((7+tiempoRiego/60)%13)+(7+tiempoRiego/60)/12}:${tiempoRiego%60}: minutos</p>
+                    <p>Tiempo de riego ${pairCount}: ${data.v5} minutos</p>
+                `;
+                pairCount++;
+            }
+            if (data.v7 > 0) {
+                tiempoRiego = tiempoRiego+data.v8;
+                scheduleHtml += `
+                    <p>Riego Número ${pairCount} - ${((7+tiempoRiego/60)%13)+(7+tiempoRiego/60)/12}:${tiempoRiego%60}: minutos</p>
+                    <p>Tiempo de riego ${pairCount}: ${data.v7} minutos</p>
+                `;
+                pairCount++;
+            }
+            if (data.v9 > 0) {
+                tiempoRiego = tiempoRiego+data.v10;
+                scheduleHtml += `
+                    <p>Riego Número ${pairCount} - ${((7+tiempoRiego/60)%13)+(7+tiempoRiego/60)/12}:${tiempoRiego%60}: minutos</p>
+                    <p>Tiempo de riego ${pairCount}: ${data.v9} minutos</p>
+                `;
+                pairCount++;
+            }
+            if (data.v11 > 0) {
+                tiempoRiego = tiempoRiego+data.v12;
+                scheduleHtml += `
+                    <p>Riego Número ${pairCount} - ${((7+tiempoRiego/60)%13)+(7+tiempoRiego/60)/12}:${tiempoRiego%60}: minutos</p>
+                    <p>Tiempo de riego ${pairCount}: ${data.v11} minutos</p>
+                `;
+                pairCount++;
+            }
+
+            document.getElementById('schedule').innerHTML = scheduleHtml || '<p>No hay tiempos de riego configurados.</p>';
+        })
+        .catch(error => console.error('Error al obtener el horario:', error));
+}
+
+
 // Función para actualizar el horario en Blynk
 function updateSchedule(event) {
     event.preventDefault();
