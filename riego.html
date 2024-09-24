@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Riego Automático</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Horario de Riego Automático</h1>
+
+        <div id="schedule">
+            <!-- Aquí se mostrarán los tiempos de riego actuales -->
+        </div>
+
+        <h2>Modificar Horario</h2>
+        <form id="schedule-form">
+            <!-- Inputs para modificar tiempos de espera y riego -->
+            <div class="input-group">
+                <label for="wait-1">Tiempo de espera 1 (min):</label>
+                <input type="number" id="wait-1" name="wait-1" min="0" step="1">
+            </div>
+            <div class="input-group">
+                <label for="water-1">Tiempo de riego 1 (min):</label>
+                <input type="number" id="water-1" name="water-1" min="0" step="1">
+            </div>
+
+            <!-- Puedes agregar más parejas de tiempo de espera y riego según necesites -->
+
+            <button type="submit">Actualizar Horario</button>
+        </form>
+
+        <div id="response"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
