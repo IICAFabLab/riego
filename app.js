@@ -15,11 +15,12 @@ function getSchedule() {
 
             if (data.v0 > 0) {
                 tiempoRiego = data.v1;
+                minutos = tiempoRiego % 60;
                 scheduleHtml += `
                     <tr class="highlight">
                         <td><strong>Riego ${pairCount}</strong></td>                        
-                        <td><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${tiempoRiego % 60}</td>
-                        <td><strong>Duración:</strong> ${data.v0} minutos</td>
+                        <td>${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${minutos.toString().padStart(2, '0')}</td>
+                        <td> ${data.v0} minutos</td>
                         
                     <tr>
                 `;
@@ -28,10 +29,11 @@ function getSchedule() {
             }
             if (data.v2 > 0) {
                 tiempoRiego = data.v0+data.v1+data.v4;
+                minutos = tiempoRiego % 60;
                 scheduleHtml += `
                     <tr class="highlight">
-                        <td><strong>Riego ${pairCount}</strong></td>
-                        <td><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${tiempoRiego % 60}</td>
+                        <td><strong>Riego ${pairCount}</strong></td>                        
+                        <td>${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${minutos.toString().padStart(2, '0')}</td>
                         <td><strong>Duración:</strong> ${data.v2} minutos</td>
                        
                     </tr>
@@ -40,10 +42,11 @@ function getSchedule() {
             }
             if (data.v5 > 0) {
                 tiempoRiego = data.v0+data.v1+data.v4+data.v2+data.v6;
+                minutos = tiempoRiego % 60;
                 scheduleHtml += `
                     <tr class="highlight">
-                        <td><strong>Riego ${pairCount}</strong></td>
-                        <td><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${tiempoRiego % 60}</td>
+                        <td><strong>Riego ${pairCount}</strong></td>                        
+                        <td>${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${minutos.toString().padStart(2, '0')}</td>
                         <td><strong>Duración:</strong> ${data.v5} minutos</td>
                     </tr>
                 `;
@@ -51,10 +54,11 @@ function getSchedule() {
             }
             if (data.v7 > 0) {
                 tiempoRiego = data.v0+data.v1+data.v2+data.v4+data.v5+data.v6+data.v8;
+                minutos = tiempoRiego % 60;
                 scheduleHtml += `
                     <tr class="highlight">
-                        <td><strong>Riego ${pairCount}</strong></td>
-                        <td><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${tiempoRiego % 60}</td>
+                        <td><strong>Riego ${pairCount}</strong></td>                        
+                        <td>${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${minutos.toString().padStart(2, '0')}</td>
                         <td><strong>Duración:</strong> ${data.v7} minutos</td>
                     </tr>
                 `;
@@ -62,10 +66,11 @@ function getSchedule() {
             }
             if (data.v9 > 0) {
                 tiempoRiego = data.v0+data.v1+data.v2+data.v4+data.v5+data.v6+data.v7+data.v8+data.v10;
+                minutos = tiempoRiego % 60;
                 scheduleHtml += `
                     <tr class="highlight">
-                        <td><strong>Riego ${pairCount}</strong></td>
-                        <td><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${tiempoRiego % 60}</td>
+                        <td><strong>Riego ${pairCount}</strong></td>                        
+                        <td>${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${minutos.toString().padStart(2, '0')}</td>
                         <td><strong>Duración:</strong> ${data.v9} minutos</td>
                     </tr>
                 `;
@@ -73,10 +78,11 @@ function getSchedule() {
             }
             if (data.v11 > 0) {
                 tiempoRiego = data.v0+data.v1+data.v2+data.v4+data.v5+data.v6+data.v7+data.v8+data.v9+data.v10+data.v12;
+                minutos = tiempoRiego % 60;
                 scheduleHtml += `
                     <tr class="highlight">
-                        <td><strong>Riego ${pairCount}</strong></td>
-                        <td><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${tiempoRiego % 60}</td>
+                        <td><strong>Riego ${pairCount}</strong></td>                        
+                        <td>${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${minutos.toString().padStart(2, '0')}</td>
                         <td><strong>Duración:</strong> ${data.v11} minutos</td>
                     </tr>
                 `;
