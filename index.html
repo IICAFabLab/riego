@@ -10,9 +10,20 @@
     <div class="container">
         <h1>Horario de Riego Automático</h1>
 
-        <div id="schedule">
-            <!-- Aquí se mostrarán los tiempos de riego actuales -->
-        </div>
+        <table>
+            <caption>Horario de Riego</caption>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Hora</th>
+                    <th>Tiempo de Espera</th>
+                    <th>Tiempo de Riego</th>
+                </tr>
+            </thead>
+            <tbody id="schedule"></tbody>
+        </table>
+
+       
 
         <h2>Modificar Horario</h2>
         <form id="schedule-form">
