@@ -88,7 +88,7 @@ function getSchedule() {
                 `;
                 pairCount++;
             }
-            let bat = `${data.v14}`;
+            let bat = `<h3>${data.v14}%</h3>`;
             document.getElementById('bateria').innerHTML = bat;
             let message = `${data.v3}`;
             document.getElementById('mensaje').innerHTML = message;
