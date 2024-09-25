@@ -18,8 +18,8 @@ function getSchedule() {
                 scheduleHtml += `
                     <div class="watering-card">
                         <h2>Riego Número ${pairCount}</h2>
-                        <div class="watering-details">
-                            <p><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 12)}:${tiempoRiego % 60}</p>
+                        <div class="watering-card-compact">
+                            <p><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${tiempoRiego % 60}</p>
                             <p><strong>Duración:</strong> ${data.v0} minutos</p>
                         </div>
                     </div>
@@ -32,8 +32,8 @@ function getSchedule() {
                 scheduleHtml += `
                     <div class="watering-card">
                         <h2>Riego Número ${pairCount}</h2>
-                        <div class="watering-details">
-                            <p><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 12)}:${tiempoRiego % 60}</p>
+                        <div class="watering-card-compact">
+                            <p><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${tiempoRiego % 60}</p>
                             <p><strong>Duración:</strong> ${data.v2} minutos</p>
                         </div>
                     </div>
@@ -45,8 +45,8 @@ function getSchedule() {
                 scheduleHtml += `
                     <div class="watering-card">
                         <h2>Riego Número ${pairCount}</h2>
-                        <div class="watering-details">
-                            <p><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 12)}:${tiempoRiego % 60}</p>
+                        <div class="watering-card-compact">
+                            <p><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${tiempoRiego % 60}</p>
                             <p><strong>Duración:</strong> ${data.v5} minutos</p>
                         </div>
                     </div>
@@ -58,8 +58,8 @@ function getSchedule() {
                 scheduleHtml += `
                     <div class="watering-card">
                         <h2>Riego Número ${pairCount}</h2>
-                        <div class="watering-details">
-                            <p><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 12)}:${tiempoRiego % 60}</p>
+                        <div class="watering-card-compact">
+                            <p><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${tiempoRiego % 60}</p>
                             <p><strong>Duración:</strong> ${data.v7} minutos</p>
                         </div>
                     </div>
@@ -71,8 +71,8 @@ function getSchedule() {
                 scheduleHtml += `
                     <div class="watering-card">
                         <h2>Riego Número ${pairCount}</h2>
-                        <div class="watering-details">
-                            <p><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 12)}:${tiempoRiego % 60}</p>
+                        <div class="watering-card-compact">
+                            <p><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${tiempoRiego % 60}</p>
                             <p><strong>Duración:</strong> ${data.v9} minutos</p>
                         </div>
                     </div>
@@ -84,8 +84,8 @@ function getSchedule() {
                 scheduleHtml += `
                     <div class="watering-card">
                         <h2>Riego Número ${pairCount}</h2>
-                        <div class="watering-details">
-                            <p><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 12)}:${tiempoRiego % 60}</p>
+                        <div class="watering-card-compact">
+                            <p><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${tiempoRiego % 60}</p>
                             <p><strong>Duración:</strong> ${data.v11} minutos</p>
                         </div>
                     </div>

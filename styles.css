@@ -81,9 +81,30 @@ button:hover {
     color: #00796b;  /* Color destacado para los títulos de los datos */
 }
 
-body {
-    font-family: 'Arial', sans-serif;  /* Fuente limpia y moderna */
-    background-color: #fafafa;  /* Fondo general de la página */
-    padding: 20px;
+.watering-card-compact {
+    background-color: #e0f7fa;  /* Fondo más claro y menos saturado */
+    border-left: 4px solid #00796b;  /* Un borde a la izquierda para simplificar */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;  /* Bordes más pequeños */
+    font-size: 0.9rem;  /* Fuente más pequeña para compactarlo */
+    display: inline-block;  /* Permite que las tarjetas estén en línea */
+    width: 180px;  /* Controla el ancho para que todas las tarjetas sean del mismo tamaño */
 }
+
+.watering-card-compact p {
+    margin: 5px 0;  /* Espaciado más reducido */
+}
+
+.watering-card-compact strong {
+    color: #004d40;  /* Color oscuro y fuerte para los títulos */
+}
+
+body {
+    font-family: 'Arial', sans-serif;  /* Fuente simple y fácil de leer */
+    background-color: #f0f0f0;  /* Fondo neutro y suave */
+    padding: 20px;
+    text-align: center;  /* Centra las tarjetas en la pantalla */
+}
+
 
