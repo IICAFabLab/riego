@@ -20,7 +20,7 @@ function getSchedule() {
                     <tr class="highlight">
                         <td><strong>Riego ${pairCount}</strong></td>                        
                         <td>${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${minutos.toString().padStart(2, '0')}</td>
-                        <td> ${data.v0} minutos</td>
+                        <td> ${data.v0} min</td>
                         
                     <tr>
                 `;
@@ -34,7 +34,7 @@ function getSchedule() {
                     <tr class="highlight">
                         <td><strong>Riego ${pairCount}</strong></td>                        
                         <td>${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${minutos.toString().padStart(2, '0')}</td>
-                        <td><strong>Duración:</strong> ${data.v2} minutos</td>
+                        <td> ${data.v2} min</td>
                        
                     </tr>
                 `;
@@ -47,7 +47,7 @@ function getSchedule() {
                     <tr class="highlight">
                         <td><strong>Riego ${pairCount}</strong></td>                        
                         <td>${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${minutos.toString().padStart(2, '0')}</td>
-                        <td><strong>Duración:</strong> ${data.v5} minutos</td>
+                        <td>${data.v5} min</td>
                     </tr>
                 `;
                 pairCount++;
@@ -59,7 +59,7 @@ function getSchedule() {
                     <tr class="highlight">
                         <td><strong>Riego ${pairCount}</strong></td>                        
                         <td>${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${minutos.toString().padStart(2, '0')}</td>
-                        <td><strong>Duración:</strong> ${data.v7} minutos</td>
+                        <td> ${data.v7} min</td>
                     </tr>
                 `;
                 pairCount++;
@@ -71,7 +71,7 @@ function getSchedule() {
                     <tr class="highlight">
                         <td><strong>Riego ${pairCount}</strong></td>                        
                         <td>${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${minutos.toString().padStart(2, '0')}</td>
-                        <td><strong>Duración:</strong> ${data.v9} minutos</td>
+                        <td> ${data.v9} min</td>
                     </tr>
                 `;
                 pairCount++;
@@ -83,7 +83,7 @@ function getSchedule() {
                     <tr class="highlight">
                         <td><strong>Riego ${pairCount}</strong></td>                        
                         <td>${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${minutos.toString().padStart(2, '0')}</td>
-                        <td><strong>Duración:</strong> ${data.v11} minutos</td>
+                        <td>< ${data.v11} min</td>
                     </tr>
                 `;
                 pairCount++;
