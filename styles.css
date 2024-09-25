@@ -155,5 +155,18 @@ caption {
     background-color: #dff0d8;
     color: #3c763d;
 }
+.battery-container {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
 
+.battery-label {
+    margin-right: 10px;
+    color: #4CAF50; /* Color verde para resaltar */
+}
 
+.battery-value {
+    color: #FF5722; /* Color distintivo para el valor de la batería */
+}

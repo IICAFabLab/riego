@@ -6,7 +6,7 @@ const apiUrl = `https://ny3.blynk.cloud/external/api/get?token=${blynkToken}`;
 
 
 function getSchedule() {
-    fetch(apiUrl + '&v0&v1&v2&v3&v4&v5&v6&v7&v8&v9&v10&v11&v12v14')
+    fetch(apiUrl + '&v0&v1&v2&v3&v4&v5&v6&v7&v8&v9&v10&v11&v12&v14')
         .then(response => response.json())
         .then(data => {
             let scheduleHtml = '';
