@@ -103,7 +103,7 @@ button:hover {
 body {
     font-family: 'Arial', sans-serif;  /* Fuente simple y fácil de leer */
     background-color: #f0f0f0;  /* Fondo neutro y suave */
-    padding: 20px;
+    padding: 5px;
     text-align: center;  /* Centra las tarjetas en la pantalla */
 }
 

@@ -9,19 +9,19 @@ function getSchedule() {
     fetch(apiUrl + '&v0&v1&v2&v4&v5&v6&v7&v8&v9&v10&v11&v12')
         .then(response => response.json())
         .then(data => {
-            let scheduleHtml = '';
+            let scheduleHtml = '<table>';
             let pairCount = 1;
             let tiempoRiego = 0;
 
             if (data.v0 > 0) {
                 tiempoRiego = data.v1;
                 scheduleHtml += `
-                    <div class="watering-card-compact">
-                        <p><strong>Riego ${pairCount}</strong></p>                        
-                        <p><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${tiempoRiego % 60}</p>
-                        <p><strong>Duración:</strong> ${data.v0} minutos</p>
+                    <tr class="watering-card-compact">
+                        <td><strong>Riego ${pairCount}</strong></td>                        
+                        <td><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${tiempoRiego % 60}</td>
+                        <td><strong>Duración:</strong> ${data.v0} minutos</td>
                         
-                    </div>
+                    <tr>
                 `;
 
                 pairCount++;
@@ -29,61 +29,65 @@ function getSchedule() {
             if (data.v2 > 0) {
                 tiempoRiego = data.v0+data.v1+data.v4;
                 scheduleHtml += `
-                    <div class="watering-card-compact">
-                        <p><strong>Riego ${pairCount}</strong></p>
-                        <p><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${tiempoRiego % 60}</p>
-                        <p><strong>Duración:</strong> ${data.v2} minutos</p>
+                    <tr class="watering-card-compact">
+                        <td><strong>Riego ${pairCount}</strong></td>
+                        <td><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${tiempoRiego % 60}</td>
+                        <td><strong>Duración:</strong> ${data.v2} minutos</td>
                        
-                    </div>
+                    </tr>
                 `;
                 pairCount++;
             }
             if (data.v5 > 0) {
                 tiempoRiego = data.v0+data.v1+data.v4+data.v2+data.v6;
                 scheduleHtml += `
-                    <div class="watering-card-compact">
-                        <p><strong>Riego ${pairCount}</strong></p>
-                        <p><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${tiempoRiego % 60}</p>
-                        <p><strong>Duración:</strong> ${data.v5} minutos</p>
-                    </div>
+                    <tr class="watering-card-compact">
+                        <td><strong>Riego ${pairCount}</strong></td>
+                        <td><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${tiempoRiego % 60}</td>
+                        <td><strong>Duración:</strong> ${data.v5} minutos</td>
+                    </tr>
                 `;
                 pairCount++;
             }
             if (data.v7 > 0) {
                 tiempoRiego = data.v0+data.v1+data.v2+data.v4+data.v5+data.v6+data.v8;
                 scheduleHtml += `
-                    <div class="watering-card-compact">
-                        <p><strong>Riego ${pairCount}</strong></p>
-                        <p><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${tiempoRiego % 60}</p>
-                        <p><strong>Duración:</strong> ${data.v7} minutos</p>
-                    </div>
+                    <tr class="watering-card-compact">
+                        <td><strong>Riego ${pairCount}</strong></td>
+                        <td><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${tiempoRiego % 60}</td>
+                        <td><strong>Duración:</strong> ${data.v7} minutos</td>
+                    </tr>
                 `;
                 pairCount++;
             }
             if (data.v9 > 0) {
                 tiempoRiego = data.v0+data.v1+data.v2+data.v4+data.v5+data.v6+data.v7+data.v8+data.v10;
                 scheduleHtml += `
-                    <div class="watering-card-compact">
-                        <p><strong>Riego ${pairCount}</strong></p>
-                        <p><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${tiempoRiego % 60}</p>
-                        <p><strong>Duración:</strong> ${data.v9} minutos</p>
-                    </div>
+                    <tr class="watering-card-compact">
+                        <td><strong>Riego ${pairCount}</strong></td>
+                        <td><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${tiempoRiego % 60}</td>
+                        <td><strong>Duración:</strong> ${data.v9} minutos</td>
+                    </tr>
                 `;
                 pairCount++;
             }
             if (data.v11 > 0) {
                 tiempoRiego = data.v0+data.v1+data.v2+data.v4+data.v5+data.v6+data.v7+data.v8+data.v9+data.v10+data.v12;
                 scheduleHtml += `
-                    <div class="watering-card-compact">
-                        <p><strong>Riego ${pairCount}</strong></p>
-                        <p><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${tiempoRiego % 60}</p>
-                        <p><strong>Duración:</strong> ${data.v11} minutos</p>
-                    </div>
+                    <tr class="watering-card-compact">
+                        <td><strong>Riego ${pairCount}</strong></td>
+                        <td><strong>Hora de inicio:</strong> ${((7 + Math.floor(tiempoRiego / 60)) % 13) + Math.floor((7 + Math.floor(tiempoRiego / 60)) / 13)}:${tiempoRiego % 60}</td>
+                        <td><strong>Duración:</strong> ${data.v11} minutos</td>
+                    </tr>
                 `;
                 pairCount++;
             }
-
-            document.getElementById('schedule').innerHTML = scheduleHtml || '<p>No hay tiempos de riego configurados.</p>';
+            scheduleHtml += '</table>';
+            if (pairCount > 1) {
+                document.getElementById('schedule').innerHTML = scheduleHtml ;
+            }else{
+                document.getElementById('schedule').innerHTML = '<p>No hay tiempos de riego configurados.</p>';                
+            }
         })
         .catch(error => console.error('Error al obtener el horario:', error));
 }
